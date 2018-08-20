@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "svg2json": "npx svg2json -i ./src/icon/svg -o ./src/icon/svg.js",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.4.1",
-    "react-native": "0.56.0"
+    "react-native": "0.56.0",
+    "react-native-svg": "^6.5.2"
   },
   "devDependencies": {
     "babel-jest": "23.4.2",
     "babel-preset-react-native": "^5",
     "jest": "23.5.0",
+    "react-native-svg2json": "^1.0.1",
     "react-test-renderer": "16.4.1"
   },
   "jest": {
