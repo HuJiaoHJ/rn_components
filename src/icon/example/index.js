@@ -26,8 +26,6 @@ const styles = StyleSheet.create({
     }
 });
 
-const list = new Array(10).fill('1');
-
 class IconExample extends Component {
     render() {
         return (
