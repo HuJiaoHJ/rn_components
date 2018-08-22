@@ -4,13 +4,13 @@ import React, { Component } from 'react';
 import SvgUri from './react-native-svg-uri';
 
 type IconProps = {
-    icon: String,
-    size: Number,
-    color: String | Number,
-    style: any,
+    icon: string,
+    size: number,
+    color: string | number,
+    style: object,
 };
 
-export default function createIconSet(svg: Object, fontName: String) {
+export default function createIconSet(svg: object, fontName: string) {
     class Icon extends Component<IconProps> {
         render () {
             const { icon, color, size, style } = this.props;
