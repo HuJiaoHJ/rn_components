@@ -4,20 +4,43 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "web": "NODE_ENV=development node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --config ./web/webpack.config.js",
     "svg2json": "npx svg2json -i ./src/icon/svg -o ./src/icon/svg.js",
+    "svg2iconfont": "npx svg2iconfont -i ./src/icon/svg -o ./src/icon/rn_iconfont -f rn_iconfont",
+    "svg": "npm run svg2json && npm run svg2iconfont",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.4.1",
+    "react-art": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-native": "0.56.0",
-    "react-native-svg": "^6.5.2"
+    "react-native-svg": "^6.5.2",
+    "react-native-web": "^0.8.9"
   },
   "devDependencies": {
     "babel-jest": "23.4.2",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
     "babel-preset-react-native": "^5",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.79.1",
+    "flowtype": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "jest": "23.5.0",
+    "mini-css-extract-plugin": "^0.4.2",
     "react-native-svg2json": "^1.0.1",
-    "react-test-renderer": "16.4.1"
+    "react-test-renderer": "16.4.1",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
   },
   "jest": {
     "preset": "react-native"

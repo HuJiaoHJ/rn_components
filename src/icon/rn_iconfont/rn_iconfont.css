@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "rn_iconfont";
+  src: url('rn_iconfont.eot');
+	src: url('rn_iconfont.eot?#iefix') format('eot'),
+		url('rn_iconfont.woff2') format('woff2'),
+		url('rn_iconfont.woff') format('woff'),
+		url('rn_iconfont.ttf') format('truetype'),
+		url('rn_iconfont.svg#rn_iconfont') format('svg');
+}
+
+[class^="rn_iconfont-"], [class*=" rn_iconfont-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'rn_iconfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.rn_iconfont-arrow-left:before {
+	content: "\E001";
+}
