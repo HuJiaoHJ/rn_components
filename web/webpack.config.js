@@ -36,14 +36,15 @@ module.exports = {
                 test: /\.(css)$/,
                 include: [appSrc, /node_modules/],
                 use: [
-                    process.env.NODE_ENV === 'development' ? {
+                    {
                         loader: require.resolve('style-loader'),
                         options: {
                             sourceMap: process.env.NODE_ENV === 'development' ? true : false,
                         },
-                    } : {
-                        loader: MiniCssExtractPlugin.loader,
                     },
+                    // process.env.NODE_ENV === 'development' ? {} : {
+                    //     loader: MiniCssExtractPlugin.loader,
+                    // },
                     {
                         loader: require.resolve('css-loader'),
                         options: {
