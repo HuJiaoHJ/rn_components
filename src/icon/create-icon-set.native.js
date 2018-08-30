@@ -11,7 +11,7 @@ type IconProps = {
 };
 
 export default function createIconSet(svg: object, fontName: string) {
-    class Icon extends Component<IconProps> {
+    return class Icon extends Component<IconProps> {
         render () {
             const { icon, color, size, style } = this.props;
             let svgXmlData = svg[icon];
@@ -25,6 +25,4 @@ export default function createIconSet(svg: object, fontName: string) {
             );
         }
     };
-
-    return Icon;
 }
