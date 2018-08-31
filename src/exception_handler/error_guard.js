@@ -6,8 +6,7 @@ export const setJSExceptionHandler = (customHandler = noop, allowedInDevMode = f
         console.log("Not setting the JS handler .. please fix setJSExceptionHandler call");
         return;
     }
-    // const allowed = allowedInDevMode ? true : !__DEV__;
-    const allowed = true;
+    const allowed = allowedInDevMode ? true : !__DEV__;
     if (allowed) {
         global.ErrorUtils.setGlobalHandler(customHandler);
         console.error = (message, error) => global.ErrorUtils.reportError(error); // sending console.error so that it can be caught
