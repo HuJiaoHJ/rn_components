@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { createElement, StyleSheet } from 'react-native'
 
 export default function createIconSet(svgs, fontName) {
-  class Icon extends Component {
+  return class Icon extends Component {
     static propTypes = {
       icon: PropTypes.string,
       size: PropTypes.number,
@@ -28,5 +28,4 @@ export default function createIconSet(svgs, fontName) {
       return createElement('i', props)
     }
   }
-  return Icon
 }

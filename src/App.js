@@ -14,7 +14,7 @@ import CtachComp from './exception_handler/catch_comp';
 
 setTimeout(() => {
   console.log('setTimeout ----------');
-  console.lo('------');
+  // console.lo('------');
 }, 3000);
 
 const styles = StyleSheet.create({
