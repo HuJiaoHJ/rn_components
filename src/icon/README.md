@@ -116,7 +116,7 @@ web端我们使用iconfont来做Icon组件（注意：iconfont不支持多色ico
 还是svg文件转换的问题，我们需要先将svg文件转换成iconfont，即
 
 <p align="left">
-    <img width="300px" src="../screenshot/iconfont.png">
+    <img width="300px" src="https://user-images.githubusercontent.com/11912260/44942540-19b25100-ade6-11e8-9018-bdf5f6ff5403.png">
 </p>
 
 这样我们就能向常规web一样使用iconfont啦
@@ -205,3 +205,13 @@ export default function () {
   ))
 }
 ```
+
+以上所有代码可在个人开发的RN组件库的项目中查看到：[rn_components](https://github.com/HuJiaoHJ/rn_components)，组件库现在才刚开始建设，后续会不断完善
+
+## 写在最后
+
+以上就是我对 React Native Icon方案：react-native-svg 的分享，希望能对有需要的小伙伴有帮助~~~
+
+喜欢我的文章的小伙伴可以点star ⭐️
+
+欢迎关注 [我的掘金](https://juejin.im/user/56dfa4391532bc00515e13d9/posts)、[我的知乎](https://www.zhihu.com/people/hu-jiao-36-21/posts)
