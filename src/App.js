@@ -1,35 +1,30 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import * as React from 'react';
+import { Router, Route, Switch } from 'react-router-native';
+import createHistory from 'history/createMemoryHistory';
+import { View, StyleSheet } from 'react-native';
+import Home from './home';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import IconExapmle from './icon/example';
-import './exception_handler/guard_comp';
-import CtachComp from './exception_handler/catch_comp';
-
-setTimeout(() => {
-  console.log('setTimeout ----------');
-  // console.lo('------');
-}, 3000);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <CtachComp>
-          <IconExapmle/>
-        </CtachComp>
-      </View>
-    );
-  }
+const history = createHistory();
+class App extends React.Component {
+    router = {
+        key: 'home',
+        component: Home,
+        path: '/',
+        exact: true,
+    }
+    render () {
+        return (
+            <View style={{ flex: 1 }}>
+                <Router history={history}>
+                    <Switch>
+                        <View style={ {flex: 1} }>
+                            <Route key='home' exact={true} path='/' component={Home}/>
+                        </View>
+                    </Switch>
+                </Router>
+            </View>
+        )
+    }
 }
+
+export default App;

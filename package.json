@@ -17,7 +17,8 @@
     "react-dom": "^16.4.2",
     "react-native": "0.56.0",
     "react-native-svg": "^6.5.2",
-    "react-native-web": "^0.8.9"
+    "react-native-web": "^0.8.9",
+    "react-router-native": "^4.3.0"
   },
   "devDependencies": {
     "babel-jest": "23.4.2",
