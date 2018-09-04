@@ -5,6 +5,7 @@ import {
     StyleSheet,
     TouchableOpacity,
 } from 'react-native';
+import pages from './pages';
 
 const styles = StyleSheet.create({
     container: {
@@ -16,11 +17,11 @@ const styles = StyleSheet.create({
 
 class Home extends React.Component {
     toItem = item => {
-        console.log(item);
+        this.props.history.push(item.path);
     }
-    getItem = item => {
+    getItem = (item, index) => {
         return (
-            <TouchableOpacity onPress={() => this.toItem(item)}>
+            <TouchableOpacity onPress={() => this.toItem(item)} key={index}>
                 <View>
                     <Text>{item.key}</Text>
                 </View>
@@ -30,7 +31,7 @@ class Home extends React.Component {
     render () {
         return (
             <View style={styles.container}>
-                <Text>Home</Text>
+                { pages.routerArr.map((item, index) => this.getItem(item, index)) }
             </View>
         )
     }
