@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
-import Icon from '../index';
+import Icon from 'rn_components/icon';
+import Navbar from 'rn_components/navbar';
 import svg from '../svg';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 40,
     },
     compWrapper: {
         flex: 1,
@@ -30,6 +30,9 @@ class IconExample extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Navbar 
+                    title={'Icon'}
+                    handleLeft={() => this.props.history.go(-1)}/>
                 <ScrollView>
                     <View style={styles.compWrapper}>
                         { Object.keys(svg).map((item, index) => (
