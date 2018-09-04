@@ -1,4 +1,5 @@
 import IconExample from './icon/example';
+import NavbarExample from './navbar/example';
 import ExceptionHandlerExample from './exception_handler/example';
 
 const routerArr = [
@@ -6,6 +7,11 @@ const routerArr = [
         key: 'Icon',
         path: '/icon',
         component: IconExample,
+    },
+    {
+        key: 'Navbar',
+        path: '/navbar',
+        component: NavbarExample,
     },
     {
         key: 'Exception Handler',
@@ -17,5 +23,6 @@ const routerArr = [
 export default {
     routerArr,
     IconExample,
+    NavbarExample,
     ExceptionHandlerExample,
 }
