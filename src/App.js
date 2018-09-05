@@ -1,11 +1,20 @@
 import * as React from 'react';
 import { Router, Route, Switch } from 'react-router-native';
 import createHistory from 'history/createMemoryHistory';
-import { View, StyleSheet } from 'react-native';
+import { 
+    View,
+    StyleSheet,
+    Platform,
+} from 'react-native';
 import Home from './home';
 import pages from './pages';
 
 const history = createHistory();
+
+const isIphoneX = (() => {
+    const x_width = 375;
+    const x_height = 812;
+})()
 
 const router = [{
     key: 'home',
