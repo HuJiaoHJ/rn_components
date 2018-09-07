@@ -29,6 +29,18 @@ module.exports = {
                         cacheDirectory: true,
                         babelrc: false,
                         presets: ['react-app'],
+                        plugins: [
+                            [
+                              'module-resolver',
+                              {
+                                root: ['./'],
+                                alias: {
+                                  '^rn_components/(.+)': './src/\\1'
+                                },
+                                extensions: ['.jsx', '.js', '.ios.jsx', '.ios.js', '.android.jsx', '.android.js']
+                              }
+                            ]
+                          ]
                     },
                 }, ],
             },
