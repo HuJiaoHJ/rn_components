@@ -32,7 +32,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^3.1.2",
     "babel-preset-react-native": "^5",
-    "css-loader": "^1.0.0",
     "eslint": "^5.8.0",
     "eslint-config-react-app": "^3.0.4",
     "eslint-plugin-flowtype": "^3.1.1",
@@ -44,6 +43,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.1.2",
     "jest": "23.5.0",
+    "lint-staged": "^7.3.0",
     "react-native-svg2json": "^1.0.1",
     "react-test-renderer": "16.4.1",
     "style-loader": "^0.22.1",
@@ -55,5 +55,16 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "lint-staged": {
+    "src/**/{*.js,*.jsx}": [
+      "yarn run lint",
+      "yarn run staged_flow"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "line-staged"
+    }
   }
 }
