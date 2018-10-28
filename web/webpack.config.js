@@ -1,11 +1,9 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-const appDir = path.resolve(__dirname, '../');
-const appSrc = path.resolve(appDir, 'src');
+const appDir = path.resolve(__dirname, '../')
+const appSrc = path.resolve(appDir, 'src')
 
 module.exports = {
     entry: {
@@ -28,7 +26,7 @@ module.exports = {
                     options: {
                         cacheDirectory: true,
                         babelrc: false,
-                        presets: ['react-app'],
+                        presets: ['react-app', 'flow'],
                         plugins: [
                             [
                               'module-resolver',
@@ -43,28 +41,6 @@ module.exports = {
                           ]
                     },
                 }, ],
-            },
-            {
-                test: /\.(css)$/,
-                include: [appSrc, /node_modules/],
-                use: [
-                    {
-                        loader: require.resolve('style-loader'),
-                        options: {
-                            sourceMap: process.env.NODE_ENV === 'development' ? true : false,
-                        },
-                    },
-                    // process.env.NODE_ENV === 'development' ? {} : {
-                    //     loader: MiniCssExtractPlugin.loader,
-                    // },
-                    {
-                        loader: require.resolve('css-loader'),
-                        options: {
-                            minimize: process.env.NODE_ENV === 'development' ? true : false,
-                            sourceMap: process.env.NODE_ENV === 'development' ? false : true,
-                        },
-                    },
-                ],
             },
             {
                 test: /\.(ttf|svg|eot|woff|woff2)$/,
@@ -103,4 +79,4 @@ module.exports = {
         },
         modules: ['web_modules', 'node_modules'],
     },
-};
+}
