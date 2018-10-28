@@ -7,10 +7,10 @@ type IconProps = {
     icon: string,
     size: number,
     color: string | number,
-    style: object,
+    style: Object,
 }
 
-export default function createIconSet(svg: object, fontName: string) {
+export default function createIconSet(svg: Object, fontName: string) {
     return class Icon extends Component<IconProps> {
         render () {
             const { icon, color, size, style } = this.props

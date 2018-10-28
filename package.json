@@ -9,7 +9,8 @@
     "svg2json": "npx svg2json -i ./src/icon/svg -o ./src/icon/svg.js",
     "svg2iconfont": "npx svg2iconfont -i ./src/icon/svg -o ./src/icon/rn_iconfont -f rn_iconfont",
     "svg": "npm run svg2json && npm run svg2iconfont",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "staged_flow": "flow focus-check"
   },
   "dependencies": {
     "react": "16.4.1",
@@ -39,9 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
-    "flow": "^0.2.3",
-    "flow-bin": "^0.80.0",
-    "flowtype": "^2.0.0",
+    "flow-bin": "0.76.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.1.2",
     "jest": "23.5.0",

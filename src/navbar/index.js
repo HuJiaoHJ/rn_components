@@ -42,12 +42,12 @@ type NavbarProps = {
     titleFontSize: number,
     leftIcon: string,
     leftIconSize: number,
-    leftIconColor: number,
-    rightInfo: any,
-    handleLeft: Function,
-    handleRight: Function,
-    centerStyle: StyleSheet.styles,
-    navbarStyle: StyleSheet.styles,
+    leftIconColor: string,
+    rightInfo?: any,
+    handleLeft?: Function,
+    handleRight?: Function,
+    centerStyle?: Object,
+    navbarStyle?: Object,
 }
 
 class Navbar extends React.Component<NavbarProps> {
