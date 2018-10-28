@@ -1,12 +1,12 @@
 // @flow
-import * as React from 'react';
+import * as React from 'react'
 import { 
     View,
     Text,
     TouchableOpacity,
     StyleSheet,
-} from 'react-native';
-import Icon from 'rn_components/icon';
+} from 'react-native'
+import Icon from 'rn_components/icon'
 
 const styles = StyleSheet.create({
     container: {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-end',
     }
-});
+})
 
 type NavbarProps = {
     title: string,
@@ -58,13 +58,13 @@ class Navbar extends React.Component<NavbarProps> {
         leftIconColor: '#000',
     }
     handleLeft = () => {
-        this.props.handleLeft && this.props.handleLeft();
+        this.props.handleLeft && this.props.handleLeft()
     }
     handleRight = () => {
-        this.props.handleRight && this.props.handleRight();
+        this.props.handleRight && this.props.handleRight()
     }
     render () {
-        const { title, titleFontSize, leftIcon, leftIconSize, leftIconColor, rightInfo, centerStyle, navbarStyle } = this.props;
+        const { title, titleFontSize, leftIcon, leftIconSize, leftIconColor, rightInfo, centerStyle, navbarStyle } = this.props
         return (
             <View style={styles.container}>
                 <View style={[styles.navbar, navbarStyle]}>
@@ -84,8 +84,8 @@ class Navbar extends React.Component<NavbarProps> {
                     </View>
                 </View>
             </View>
-        );
+        )
     }
 }
 
-export default Navbar;
+export default Navbar

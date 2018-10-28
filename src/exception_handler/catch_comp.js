@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, Modal, Text } from 'react-native';
+import React, { Component } from 'react'
+import { View, Modal, Text } from 'react-native'
 
 class CatchComp extends Component {
     state = {
@@ -10,7 +10,7 @@ class CatchComp extends Component {
         this.setState({
             error,
             errorInfo,
-        });
+        })
     }
     render () {
         return (
@@ -23,8 +23,8 @@ class CatchComp extends Component {
                     </View>
                 </Modal>
             ) : this.props.children
-        );
+        )
     }
 }
 
-export default CatchComp;
+export default CatchComp

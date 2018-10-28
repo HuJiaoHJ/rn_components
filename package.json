@@ -9,7 +9,7 @@
     "svg2json": "npx svg2json -i ./src/icon/svg -o ./src/icon/svg.js",
     "svg2iconfont": "npx svg2iconfont -i ./src/icon/svg -o ./src/icon/rn_iconfont -f rn_iconfont",
     "svg": "npm run svg2json && npm run svg2iconfont",
-    "test": "jest"
+    "lint": "eslint src"
   },
   "dependencies": {
     "react": "16.4.1",
@@ -21,6 +21,7 @@
     "react-router-native": "^4.3.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "23.4.2",
     "babel-loader": "^7.1.5",
     "babel-plugin-module-resolver": "^3.1.1",
@@ -28,11 +29,18 @@
     "babel-preset-react-app": "^3.1.2",
     "babel-preset-react-native": "^5",
     "css-loader": "^1.0.0",
+    "eslint": "^5.8.0",
+    "eslint-config-react-app": "^3.0.4",
+    "eslint-plugin-flowtype": "^3.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "flow": "^0.2.3",
     "flow-bin": "^0.80.0",
     "flowtype": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.2",
     "jest": "23.5.0",
     "mini-css-extract-plugin": "^0.4.2",
     "react-native-svg2json": "^1.0.1",

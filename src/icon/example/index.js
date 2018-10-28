@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { ScrollView, View, Text, StyleSheet } from 'react-native';
-import Icon from 'rn_components/icon';
-import Navbar from 'rn_components/navbar';
-import svg from '../svg';
+import React, { Component } from 'react'
+import { ScrollView, View, Text, StyleSheet } from 'react-native'
+import Icon from 'rn_components/icon'
+import Navbar from 'rn_components/navbar'
+import svg from '../svg'
 
 const styles = StyleSheet.create({
     container: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         fontSize: 16
     }
-});
+})
 
 class IconExample extends Component {
     render() {
@@ -44,8 +44,8 @@ class IconExample extends Component {
                     </View>
                 </ScrollView>
             </View>
-        );
+        )
     }
 }
 
-export default IconExample;
+export default IconExample

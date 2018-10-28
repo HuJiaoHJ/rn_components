@@ -1,5 +1,5 @@
-import { setJSExceptionHandler } from './error_guard';
-import { Alert } from 'react-native';
+import { setJSExceptionHandler } from './error_guard'
+import { Alert } from 'react-native'
 
 setJSExceptionHandler((e, isFatal) => {
     if (isFatal) {
@@ -11,11 +11,11 @@ setJSExceptionHandler((e, isFatal) => {
             [{
                 text: 'OK',
                 onPress: () => {
-                    console.log('ok');
+                    console.log('ok')
                 }
             }]
-        );
+        )
     } else {
-        console.log(e);
+        console.log(e)
     }
-}, true);
+}, true)

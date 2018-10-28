@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from 'react'
 import { 
     View,
     Text,
     StyleSheet,
     TouchableOpacity,
-} from 'react-native';
-import pages from './pages';
+} from 'react-native'
+import pages from './pages'
 
 const styles = StyleSheet.create({
     container: {
@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     }
-});
+})
 
 class Home extends React.Component {
     toItem = item => {
-        this.props.history.push(item.path);
+        this.props.history.push(item.path)
     }
     getItem = (item, index) => {
         return (
@@ -26,7 +26,7 @@ class Home extends React.Component {
                     <Text>{item.key}</Text>
                 </View>
             </TouchableOpacity>
-        );
+        )
     }
     render () {
         return (
@@ -37,4 +37,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Home

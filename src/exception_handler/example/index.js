@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from 'react'
 import { 
     View,
     Text,
     TouchableOpacity,
     StyleSheet,
-} from 'react-native';
-import 'rn_components/exception_handler/guard_comp';
-import { withErrorBoundary } from 'rn_components/exception_handler';
-import Navbar from 'rn_components/navbar';
+} from 'react-native'
+import 'rn_components/exception_handler/guard_comp'
+import { withErrorBoundary } from 'rn_components/exception_handler'
+import Navbar from 'rn_components/navbar'
 
 const styles = StyleSheet.create({
     container: {
@@ -25,17 +25,18 @@ class ExceptionHandlerExample extends React.Component {
         visible: false,
     }
     error = () => {
-        console.log('error');
+        console.log('error')
         setTimeout(() => {
-            const a = b;
-        }, 3000);
-        const a = c;
+            /* eslint-disable */
+            const a = b
+        }, 3000)
+        const a = c
     }
     catch = () => {
-        console.log('catch');
+        console.log('catch')
         this.setState({
             visible: true,
-        });
+        })
     }
     render () {
         if (this.state.visible) {
@@ -59,10 +60,10 @@ class ExceptionHandlerExample extends React.Component {
                     </TouchableOpacity>
                 </View>
             </View>
-        );
+        )
     }
 }
 
 export default withErrorBoundary(ExceptionHandlerExample, (error, errorInfo) => {
-    console.log('errorCallback', error, errorInfo);
-}, true);
+    console.log('errorCallback', error, errorInfo)
+}, true)

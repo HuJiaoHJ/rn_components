@@ -1,24 +1,24 @@
-import * as React from 'react';
-import { Router, Route, Switch } from 'react-router-native';
-import createHistory from 'history/createMemoryHistory';
+import * as React from 'react'
+import { Router, Route, Switch } from 'react-router-native'
+import createHistory from 'history/createMemoryHistory'
 import { 
     View,
     StyleSheet,
     Platform,
     Dimensions,
-} from 'react-native';
-import { statusBarHeight } from 'rn_components/utils';
-import Home from './home';
-import pages from './pages';
+} from 'react-native'
+import { statusBarHeight } from 'rn_components/utils'
+import Home from './home'
+import pages from './pages'
 
-const history = createHistory();
+const history = createHistory()
 
 const router = [{
     key: 'home',
     component: Home,
     path: '/',
     exact: true,
-}].concat(pages.routerArr);
+}].concat(pages.routerArr)
 class App extends React.Component {
     render () {
         return (
@@ -35,4 +35,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default App

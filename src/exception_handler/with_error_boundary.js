@@ -6,7 +6,7 @@ import {
     ScrollView,
     StyleSheet,
 } from 'react-native'
-import { statusBarHeight } from 'rn_components/utils';
+import { statusBarHeight } from 'rn_components/utils'
 import Modal from 'rn_components/rn_modal'
 import NavBar from 'rn_components/navbar'
 
@@ -95,9 +95,9 @@ function withErrorBoundary(
                     </View>
                 </Modal>
                 ) : <WrappedComponent {...this.props} />
-            );
+            )
         }
     }
 }
 
-export default withErrorBoundary;
+export default withErrorBoundary

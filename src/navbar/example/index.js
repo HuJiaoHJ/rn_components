@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
     View,
     Text,
     StyleSheet,
-} from 'react-native';
-import Navbar from 'rn_components/navbar';
+} from 'react-native'
+import Navbar from 'rn_components/navbar'
 
 class NavbarExample extends React.Component {
     back = () => {
-        this.props.history.go(-1);
+        this.props.history.go(-1)
     }
     render () {
         return (
@@ -18,8 +18,8 @@ class NavbarExample extends React.Component {
                     rightInfo={<Text>other info</Text>}
                     handleLeft={this.back}/>
             </View>
-        );
+        )
     }
 }
 
-export default NavbarExample;
+export default NavbarExample

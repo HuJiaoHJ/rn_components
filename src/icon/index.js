@@ -1,8 +1,8 @@
-import createIconSet from './create-icon-set';
-import svg from './svg';
+import createIconSet from './create-icon-set'
+import svg from './svg'
 
-const Icon = createIconSet(svg, 'rn_iconfont');
+const Icon = createIconSet(svg, 'rn_iconfont')
 
-export default Icon;
+export default Icon
 
-export { createIconSet };
+export { createIconSet }
