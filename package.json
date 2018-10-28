@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "install": "node set_git_config.js",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "web": "NODE_ENV=development node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --config ./web/webpack.config.js",
@@ -22,6 +23,8 @@
     "react-router-native": "^4.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
@@ -64,7 +67,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
     }
   }
 }
