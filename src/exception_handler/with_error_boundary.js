@@ -43,11 +43,11 @@ type CatchCompState = {
 }
 
 function withErrorBoundary(
-    WrappedComponent: React.ComponentType < CatchCompProps > ,
+    WrappedComponent: React.ComponentType<CatchCompProps> ,
     errorCallback: Function,
     allowedInDevMode: boolean,
     opt: Object = {}) {
-    return class extends React.Component < CatchCompProps, CatchCompState > {
+    return class extends React.Component<CatchCompProps, CatchCompState> {
         state = {
             error: null,
             errorInfo: false,

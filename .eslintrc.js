@@ -1,6 +1,6 @@
 module.exports = {
     parser: 'babel-eslint',
-    extends: ['react-app'],
+    extends: ['react-app', 'plugin:flowtype/recommended'],
     plugins: ['react', 'flowtype', 'jsx-a11y', 'import'],
     rules: {
         // 【error】使用单引号
