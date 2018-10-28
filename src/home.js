@@ -4,7 +4,7 @@ import {
     Text,
     StyleSheet,
     TouchableOpacity,
-} from 'react-native';
+} from 'react-native'
 import pages from './pages'
 
 const styles = StyleSheet.create({
